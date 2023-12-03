@@ -6,4 +6,7 @@ from .models import *
 # Create your views here.
 
 def index(request):
-	return render(request, 'tasks/list.html')
+    tasks = Task.objects.all()
+
+    context = {'tasks':tasks, 'form':form}
+	return render(request, 'tasks/list.html', context)
