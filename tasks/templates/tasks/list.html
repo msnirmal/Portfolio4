@@ -29,21 +29,17 @@
         color: grey;
       }
 
-      .submit {
-        background-color: #6ba3e8;
-      }
-
       .center-column {
-        width: 600px;
+        width: 800px;
         margin: 20px auto;
         padding: 20px;
-        background-color: #fff;
+        background-color: cyan;
         border-radius: 3px;
         box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 0.75);
       }
 
       .item-row {
-        background-color: #906abd;
+        background-color: #6aa3bd;
         margin: 10px;
         padding: 20px;
         border-radius: 3px;
@@ -52,11 +48,9 @@
         box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
       }
 
-      .btn-danger {
-        background-color: #ffae19;
-        border-color: #e59400;
+      .submit {
+        background-color: grey;
       }
-      
     </style>
 
     {% if user.is_authenticated %}
@@ -69,18 +63,24 @@
     <div class="center-column">
       <form method="POST" action="/">
         {% csrf_token %} {{form.title}}
-        <input class="btn btn-info" type="submit" name="Create Task" />
+        <input
+          class="btn btn-primary submit"
+          type="submit"
+          name="Create Task"
+        />
       </form>
 
       <div class="todo-list">
         {% for task in tasks %}
         <div class="item-row">
-          <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}"
-            >Update</a
-          >
-          <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}"
-            >Delete</a
-          >
+          <a
+            class="btn btn-sm btn btn-secondary"
+            href="{% url 'update_task' task.id %}"
+            >Edit Items
+          </a>
+          <a class="btn btn-sm btn btn-danger" href="{% url 'delete' task.id %}"
+            >Delete Items
+          </a>
 
           {% if task.complete == True %}
           <strike>{{task}}</strike>
