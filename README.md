@@ -1,49 +1,38 @@
 # **General Knowledge Quiz**
 
-[Visit the website here](https://gkquizportfolio3-e2c5424addcd.herokuapp.com/)
+[Visit the website here](https://todo-2023-app-8c29f27afc8c.herokuapp.com/)
 
 ![](readme_images/responsive.JPG)
 
-This terminal based program is created for quiz lovers and is for users 15 and above, however, under 15's can still use with parental guidance and permission to use electronics
+This app is created in order to plan tasks and the app also allows to edit or compelete the tasks and delete 
 
-This website is made up of the following sections:
+This app is made up of the following sections:
 
-1. Heading
-2. User Name input
-3. Welcome screen
-4. Questions
-5. Options
-6. Input field for correct user input  
-7. Answer validation (correct/ incorrect)
-8. Results
-9. Play again option
+1. Slot to add tasks and submit 
+2. Edit / complete tasks 
+3. Delete tasks 
+4. Log in 
+5. Log out 
+6. sign up   
+
 
 **Developer Goals** :
 
-1. To help users enable their kids during
-   early years of schooling
-
-2. To encourage users to improve their
-   knowledge  
-
-3. To help parents engage their kids with something educative rather than computer games and watching cartoons on TV  
-
-4. Quiz programmes like these can encourage users to read to gain more knowledge to enable them to be competitive
+1. To help users enable to pla or keep track of tasks 
 
 **User Goals:**
 
-1.	As a first-time visitor, I want an interactive quiz site that is simple and easy to use
+1.	As a first-time visitor, I want an app where i could add tasks 
 
-2.	As a first-time visitor, I want to easily navigate through the various questions involved in the quiz
+2.	As a first-time visitor, I want to edit any added tasks or complete once done 
 
-3.	As a first-time visitor, I want to be able to test my knowledge and see how i have performed
+3.	As a first-time visitor, delete tasks 
 
-4.	As a first-time visitor, i want the quiz to be self explanatory, rather than having to go through multiple paragraphs of instructions and options to select leading to various other pages and finding my way back
+4.	As a first-time visitor, i want my tasks to be visible only to me during my logged in session 
 
-5.	As a first time, i want the quiz to prompt if i am correct or incorrect
+5.	As a first time, i want to be able to sign up to personalize my tasks 
 
-6. As a first time visitor, i want to be able to play the game again
-
+==
 ## **UX**
 
 ---
