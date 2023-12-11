@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tasks List</title>
+    <title>To Do</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -30,7 +30,7 @@
       }
 
       .center-column {
-        width: 800px;
+        width: 500px;
         margin: 20px auto;
         padding: 20px;
         background-color: cyan;
@@ -60,35 +60,43 @@
     <a href="{% url 'account_login' %}">Login</a>
     {% endif %}
 
-    <div class="center-column">
-      <form method="POST" action="/">
-        {% csrf_token %} {{form.title}}
-        <input
-          class="btn btn-primary submit"
-          type="submit"
-          name="Create Task"
-        />
-      </form>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="center-column">
+            <form method="POST" action="/">
+              {% csrf_token %} {{form.title}}
+              <input
+                class="btn btn-primary submit"
+                type="submit"
+                name="Create Task"
+              />
+            </form>
 
-      <div class="todo-list">
-        {% for task in tasks %}
-        <div class="item-row">
-          <a
-            class="btn btn-sm btn btn-secondary"
-            href="{% url 'update_task' task.id %}"
-            >Edit Items
-          </a>
-          <a class="btn btn-sm btn btn-danger" href="{% url 'delete' task.id %}"
-            >Delete Items
-          </a>
+            <div class="todo-list">
+              {% for task in tasks %}
+              <div class="item-row">
+                <a
+                  class="btn btn-sm btn btn-secondary"
+                  href="{% url 'update_task' task.id %}"
+                  >Edit Items
+                </a>
+                <a
+                  class="btn btn-sm btn btn-danger"
+                  href="{% url 'delete' task.id %}"
+                  >Delete Items
+                </a>
 
-          {% if task.complete == True %}
-          <strike>{{task}}</strike>
-          {% else %}
-          <span>{{task}}</span>
-          {% endif %}
+                {% if task.complete == True %}
+                <strike>{{task}}</strike>
+                {% else %}
+                <span>{{task}}</span>
+                {% endif %}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
         </div>
-        {% endfor %}
       </div>
     </div>
   </body>
